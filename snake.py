@@ -22,7 +22,7 @@ class Snake:
 
     #add segment to th created snake with position of
     def add_segment(self, position):
-        new_segment = Turtle('square')
+        new_segment = Turtle('turtle')
         new_segment.penup()
         new_segment.color('white')
         new_segment.goto(position)
