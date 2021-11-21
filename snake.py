@@ -19,7 +19,12 @@ class Snake:
     def create_snake(self):
         for position in STARING_POSITIONS:
             self.add_segment(position)
-
+    def reset_snake(self):
+        for seg in self.segmentsList:
+            seg.goto(1000,1000)
+        self.segmentsList.clear()
+        self.create_snake()
+        self.snakeHead=self.segmentsList[0]
     #add segment to th created snake with position of
     def add_segment(self, position):
         new_segment = Turtle('turtle')
